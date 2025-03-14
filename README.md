@@ -24,7 +24,7 @@ Add this to your claude_desktop_config.json:
 
 ### Add to Cline
 
-> Copy the below and paste it into a cline prompt. It should prompt you to update the connection string.
+> Copy the below and paste it into a cline prompt.
 
 ```json
 Add the following to my MCP servers list:
