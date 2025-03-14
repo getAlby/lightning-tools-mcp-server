@@ -45,7 +45,6 @@ Add the following to my MCP servers list:
 
 - Node.js 20+
 - Yarn
-- A connection string from a lightning wallet that supports NWC
 
 ### Installation
 
