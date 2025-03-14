@@ -1,0 +1,39 @@
+{
+  "name": "@getalby/lightning-tools-mcp-server",
+  "description": "MCP server for accessing useful bitcoin lightning tools",
+  "repository": "https://github.com/getAlby/lightning-tools-mcp-server.git",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "lightning-tools-mcp-server": "build/index.js"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "keywords": [
+    "bitcoin",
+    "lightning",
+    "tools",
+    "wallet",
+    "mcp",
+    "model-context-protocol",
+    "ai"
+  ],
+  "author": "Alby contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@getalby/lightning-tools": "^5.1.2",
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@types/node": "^20.11.5",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.3.3",
+    "websocket-polyfill": "0.0.3"
+  },
+  "devDependencies": {}
+}
