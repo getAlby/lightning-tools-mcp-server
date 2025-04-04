@@ -5,6 +5,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import dotenv from "dotenv";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerRequestInvoiceTool } from "./tools/request_invoice.js";
+import { registerFiatToSatsTool } from "./tools/fiat_to_sats.js";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -22,6 +23,7 @@ class LightningToolsServer {
     );
 
     registerRequestInvoiceTool(this._server);
+    registerFiatToSatsTool(this._server);
   }
 
   async run() {
