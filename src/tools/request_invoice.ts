@@ -14,14 +14,14 @@ export function registerRequestInvoiceTool(server: McpServer) {
       description: z
         .string()
         .describe("note, memo or description describing the invoice")
-        .optional(),
+        .nullish(),
       payer_data: z
         .object({})
         .passthrough()
         .describe(
           "metadata to include with the payment such as the payer's name"
         )
-        .optional(),
+        .nullish(),
     },
     async (params) => {
       const ln = new LightningAddress(params.lightning_address);
@@ -31,8 +31,8 @@ export function registerRequestInvoiceTool(server: McpServer) {
 
       const invoice = await ln.requestInvoice({
         satoshi: params.amount,
-        comment: params.description,
-        payerdata: params.payer_data,
+        comment: params.description || undefined,
+        payerdata: params.payer_data || undefined,
       });
 
       return {
