@@ -16,7 +16,9 @@ Add this to your claude_desktop_config.json:
     "lightning-tools": {
       "command": "npx",
       "args": ["-y", "@getalby/lightning-tools-mcp-server"],
-      "env": {}
+      "env": {
+        "NWC_CONNECTION_STRING": "YOUR NWC CONNECTION STRING HERE"
+      }
     }
   }
 }
@@ -33,6 +35,7 @@ Add the following to my MCP servers list:
   "command": "npx",
   "args": ["-y", "@getalby/lightning-tools-mcp-server"],
   "env": {
+    "NWC_CONNECTION_STRING": "YOUR NWC CONNECTION STRING HERE"
   },
   "disabled": false,
   "autoApprove": []
