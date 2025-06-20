@@ -1,3 +1,9 @@
+# ⚠️ DEPRECATED ⚠️
+
+**Please use [Alby MCP](https://github.com/getAlby/mcp/) instead!** 
+
+This repository has been deprecated in favor of Alby MCP, which includes all the NWC tools along with additional lightning tools.
+
 # Lightning Tools MCP Server
 
 Interact with lightning addresses and use other common lightning tools with your LLM. Works well combined with [NWC MCP Server](https://github.com/getAlby/nwc-mcp-server)
